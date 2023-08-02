@@ -1,0 +1,2590 @@
+{
+	"info": {
+		"_postman_id": "e0409a53-95d9-49e7-a1e2-7237cfaacb47",
+		"name": "CapstoneDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17789344"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Owner\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "gach sat",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListProductByWareHouse",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/wareHouse/24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"wareHouse",
+						"24"
+					],
+					"query": [
+						{
+							"key": "wareHouseId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListProductByManufacturer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDgwNjAyMywiZXhwIjoxNjYwODkyNDIzfQ.uZS09BIam0-BVNedEKUta9TyLK6TfzJwlMUSjq0RZWiBzFF51_w5o2poYggPMda8n1nzHyJKYd_bh3QGfjmDWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/manufacturer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"manufacturer",
+						"1"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "gac",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListProductByWareHouse Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTY5OTE2NywiZXhwIjoxNjYxNzg1NTY3fQ.BhTVQr3KLAghGdLf_p0dTkTetHj0XpA9Qh6X7V7TK1tPpiWiUVQN0Jtj_LXarqxRTEDt1L07ypvlnxgPCLvplg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/wareHouse/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"wareHouse",
+						"10"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "gac",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductAndListConsignment màn checking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTY5OTE2NywiZXhwIjoxNjYxNzg1NTY3fQ.BhTVQr3KLAghGdLf_p0dTkTetHj0XpA9Qh6X7V7TK1tPpiWiUVQN0Jtj_LXarqxRTEDt1L07ypvlnxgPCLvplg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/consignment/30?warehouseId=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"consignment",
+						"30"
+					],
+					"query": [
+						{
+							"key": "warehouseId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDetail màn checking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDY1NTg5OCwiZXhwIjoxNjYwNzQyMjk4fQ.ZZ6cUiG0va7qjOAuISYiMuZWC8-IYdGnev6-DzKLiWf6vSCdz6JqdD1k1dFP1IJQ88c9d_KbH1EBEPWdJXiV3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventoryCheckingHistory/detail/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventoryCheckingHistory",
+						"detail",
+						"7"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "gac",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListInventoryCheckingHistory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDgwNjAyMywiZXhwIjoxNjYwODkyNDIzfQ.uZS09BIam0-BVNedEKUta9TyLK6TfzJwlMUSjq0RZWiBzFF51_w5o2poYggPMda8n1nzHyJKYd_bh3QGfjmDWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventoryCheckingHistory?order=as",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventoryCheckingHistory"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseId",
+							"value": "24",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "startDate",
+							"value": "2022-07-12",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-19",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "as"
+						},
+						{
+							"key": "orderBy",
+							"value": "totalDifferentAmout",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReturnToManufacturer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDgwNjAyMywiZXhwIjoxNjYwODkyNDIzfQ.uZS09BIam0-BVNedEKUta9TyLK6TfzJwlMUSjq0RZWiBzFF51_w5o2poYggPMda8n1nzHyJKYd_bh3QGfjmDWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "statusId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "startDate",
+							"value": "2022-07-12",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-19",
+							"disabled": true
+						},
+						{
+							"key": "manufacturerId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReturnToManufacturerDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDY1NTg5OCwiZXhwIjoxNjYwNzQyMjk4fQ.ZZ6cUiG0va7qjOAuISYiMuZWC8-IYdGnev6-DzKLiWf6vSCdz6JqdD1k1dFP1IJQ88c9d_KbH1EBEPWdJXiV3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer/detail/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer",
+						"detail",
+						"9"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "statusId",
+							"value": "24",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "startDate",
+							"value": "2022-07-12",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-19",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmReturnToManufacturerDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer/confirm/3?userConfirmedId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer",
+						"confirm",
+						"3"
+					],
+					"query": [
+						{
+							"key": "userConfirmedId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashBoard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY3MTU0NzkxOCwiZXhwIjoxNjcxNjM0MzE4fQ.YGdTr8spmqplFrgRQ_YrmKSCI_h_0NdZs4k8U5H6SbiQnasuEuL7elfe1Z6Ybz5LKglm6sm9c_gPL7FVyRdnCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dashBoard/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dashBoard",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cronJob",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY3MTU0NzkxOCwiZXhwIjoxNjcxNjM0MzE4fQ.YGdTr8spmqplFrgRQ_YrmKSCI_h_0NdZs4k8U5H6SbiQnasuEuL7elfe1Z6Ybz5LKglm6sm9c_gPL7FVyRdnCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dashBoard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dashBoard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTc4NTA3MSwiZXhwIjoxNjYxODcxNDcxfQ.GtvvRoGdfiUzUC55Ao6-wdlI8-PXgvgzMfCYZ8Qr1UOcGnaAn_A2-io8XElQqqBidPCYbAzJ855DM2q0xyjB-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bon rua mat 4\",\r\n\t\"productCode\": \"GACHTQ803L1   \",\r\n\t\"unitMeasure\": \"cai\",\r\n\t\"wrapUnitMeasure\": \"Thung\",\r\n\t\"numberOfWrapUnitMeasure\": 20,\r\n\t\"color\": \"xanh\",\r\n\t\"description\": \"Bon rua mat dep description\",\r\n    \"categoryId\": 1,\r\n    \"subCategoryId\": 1,\r\n    \"manufactorId\": 1,\r\n    \"unitPrice\": 5,\r\n    \"image\": \"anh.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDY1NTg5OCwiZXhwIjoxNjYwNzQyMjk4fQ.ZZ6cUiG0va7qjOAuISYiMuZWC8-IYdGnev6-DzKLiWf6vSCdz6JqdD1k1dFP1IJQ88c9d_KbH1EBEPWdJXiV3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"Gach lát nhỏ\",\r\n\t\"description\": \"Ống nước\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addManufactor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tuấn Mạnh3\",\r\n\t\"email\": \"TuanManh3@gmail.com\",\r\n\t\"phone\": \"1231231232\",\r\n    \"addressDetail\": \"so 412\",\r\n    \"provinceId\": 1,\r\n    \"districtId\": 1,\r\n    \"wardId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/manufacturer/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manufacturer",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAddress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"addressDetail\": \"so 1\",\r\n    \"provinceId\": 1,\r\n    \"districtId\": 1,\r\n    \"wardId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/address/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"address",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSubCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Gương\",\r\n\t\"description\": \"Ống nhựa đẹp\",\r\n\t\"categoryId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subCategory/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subCategory",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addWareHouse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n\t\"name\": \"Kho 2\",\r\n\t\"provinceId\": 1,\r\n    \"districtId\": 1,\r\n    \"wardId\": 1,\r\n    \"addressDetail\": \"So nha 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPhieuKiemKho",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n\t\"wareHouseId\": 1,\r\n    \"totalDifferentAmout\": 99,\r\n\t\"listCheckingHistoryDetailRequest\": [\r\n        {\r\n            \"consignmentId\": 3,\r\n            \"instockQuantity\": 50,\r\n            \"realityQuantity\": 40,\r\n            \"differentAmout\": 10\r\n        },\r\n        {\r\n            \"consignmentId\": 4,\r\n            \"instockQuantity\": 60,\r\n            \"realityQuantity\": 50,\r\n            \"differentAmout\": 10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventoryCheckingHistory/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventoryCheckingHistory",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPhieuTraHang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MDgwNjAyMywiZXhwIjoxNjYwODkyNDIzfQ.uZS09BIam0-BVNedEKUta9TyLK6TfzJwlMUSjq0RZWiBzFF51_w5o2poYggPMda8n1nzHyJKYd_bh3QGfjmDWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userConfirmedId\": 1,\r\n\r\n    \"expectedReturnDate\": \"2012-04-23T18:25:43.511Z\",\r\n\r\n\t\"totalAmout\": 30000,\r\n\r\n\t\"userCreateId\": 1,\r\n\r\n\t\"warehouseId\": 1,\r\n\r\n\t\"manufacturerId\": 1,\r\n\r\n\t\"listReturnToManufacturerDetailRequest\": [\r\n        {\r\n            \"productName\": \"gach\",\r\n            \"quantity\": 50,\r\n            \"unitMeasure\": \"Vien\",\r\n            \"unitPrice\": 1000\r\n        },\r\n        {\r\n            \"productName\": \"Sat\",\r\n            \"quantity\": 60,\r\n            \"unitMeasure\": \"Chiec\",\r\n            \"unitPrice\": 2000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer",
+						"add"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "productName",
+							"value": "se",
+							"disabled": true
+						},
+						{
+							"key": "productCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categoryId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "manufactorId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListSubProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subProduct"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"26"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"4"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getManufactorDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/manufacturer/2?pageIndex=1&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manufacturer",
+						"2"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWareHouseDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"1"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubcategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subCategory?categoryId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subCategory"
+					],
+					"query": [
+						{
+							"key": "categoryId",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "categoryName",
+							"value": "gach that",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListManufactor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/manufacturer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manufacturer"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "manufactorName",
+							"value": "vu",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListManufactor Not Paging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/manufacturer/notPaging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manufacturer",
+						"notPaging"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListWarehouse",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse?wareHouseName=nha kho",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "nha kho"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListWarehouse Not Paging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse/notPaging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"notPaging"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListCategory Not Paging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/notPaging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"notPaging"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteWareHouse",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"delete",
+						"1"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "k",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"delete",
+						"8"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "k",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePhieuTraHang",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer/delete/1?userDeleteId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer",
+						"delete",
+						"1"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "wareHouseName",
+							"value": "k",
+							"disabled": true
+						},
+						{
+							"key": "userDeleteId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListProvince",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/province",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"province"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListDistrictByProvinceId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTY5MjQzNywiZXhwIjoxNjYxNzc4ODM3fQ.aQJQYf1QMflmKVkkoBv9VJclzPQkHcVzXU4x3m8toLbJFTo5oj5m47SGEyiHNyhEIXqBjfipInfGS6P0fg-6UA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/district/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"district",
+						"1"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListWardByDistrictId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ward/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ward",
+						"1"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddImageNewProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ADMIN/Downloads/3.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/add/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"add",
+						"image"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateImage",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ADMIN/Downloads/164f13bab463773d2e72.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/image/27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"image",
+						"27"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJraG9pdnQiLCJpYXQiOjE2NjA2NTUwNDAsImV4cCI6MTY2MDc0MTQ0MH0.ou7IdeyyAWpFVKorCR4XsLl6Ks2LR8Mk23cT9K7XozHO0oc9aNbrQgWapwuWCD1v2WZBzeMsCqV_ba1kfs_ZEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Gach lát nhỏ\",\r\n\t\"description\": \"Ống nước\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"update"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateSubCategory Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJraG9pdnQiLCJpYXQiOjE2NjA2NTUwNDAsImV4cCI6MTY2MDc0MTQ0MH0.ou7IdeyyAWpFVKorCR4XsLl6Ks2LR8Mk23cT9K7XozHO0oc9aNbrQgWapwuWCD1v2WZBzeMsCqV_ba1kfs_ZEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Nội thất\",\r\n\t\"description\": \"Ống nước\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subCategory/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subCategory",
+						"update"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTc4NTA3MSwiZXhwIjoxNjYxODcxNDcxfQ.GtvvRoGdfiUzUC55Ao6-wdlI8-PXgvgzMfCYZ8Qr1UOcGnaAn_A2-io8XElQqqBidPCYbAzJ855DM2q0xyjB-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 31,\r\n    \"name\": \"Sơn \",\r\n\t\"productCode\": \"BRM803L1  \",\r\n\t\"unitMeasure\": \"cai\",\r\n\t\"wrapUnitMeasure\": \"Thung\",\r\n\t\"numberOfWrapUnitMeasure\": 20,\r\n\t\"color\": \"xanh\",\r\n\t\"description\": \"Bon rua mat dep description\",\r\n    \"categoryId\": 1,\r\n    \"subCategoryId\": 1,\r\n    \"manufactorId\": 1,\r\n    \"unitPrice\": 1000,\r\n    \"image\": \"anh.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateWareHouse",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n\t\"name\": \"Kho 2\",\r\n\t\"provinceId\": 1,\r\n    \"districtId\": 1,\r\n    \"wardId\": 1,\r\n    \"addressDetail\": \"So nha 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/warehouse/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"update"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateSubCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n\t\"name\": \"Gạch đẹp\",\r\n\t\"description\": \"Ống nhựa đẹp\",\r\n\t\"categoryId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subCategory/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subCategory",
+						"update"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePhieuTraHang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPd25lciIsImlhdCI6MTY2MTYyNDE2MCwiZXhwIjoxNjYxNzEwNTYwfQ.dtfcUK2ZG9D1XIWaXB-5NzzAaeZhWPJwJcmZ0i2F4N6fvsJRxsLOnIpmXZI0KlBNP9oVOpxYMm6QkLvfDMJQbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"expectedReturnDate\": \"2020-04-23T18:25:43.511Z\",\r\n    \"warehouseId\": 7,\r\n    \"description\": \"descripntion\",\r\n\t\"listReturnToManufacturerDetailRequest\": [\r\n        {\r\n            \"id\": 42,\r\n            \"productName\": \"thach cao\",\r\n            \"quantity\": 60,\r\n            \"unitMeasure\": \"Vien\",\r\n            \"unitPrice\": 12342\r\n        }\r\n        \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/returnToManufacturer/update/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"returnToManufacturer",
+						"update",
+						"20"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getImage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productRequest",
+							"type": "file",
+							"src": "/C:/Users/ADMIN/Downloads/3.JPG",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/download/image/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"download",
+						"image",
+						"2"
+					],
+					"query": [
+						{
+							"key": "manufactorName",
+							"value": "t",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
